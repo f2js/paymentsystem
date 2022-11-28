@@ -1,4 +1,4 @@
-package exam.paymentsystem;
+package grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -20,38 +20,38 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.15.0)",
     comments = "Source: PaymentSystem.proto")
-public final class PaymentServiceGrpc {
+public final class paymentGrpc {
 
-  private PaymentServiceGrpc() {}
+  private paymentGrpc() {}
 
-  public static final String SERVICE_NAME = "exam.paymentsystem.PaymentService";
+  public static final String SERVICE_NAME = "grpc.payment";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<exam.paymentsystem.PaymentRequest,
-      exam.paymentsystem.PaymentResponse> getPaymentMethod;
+  private static volatile io.grpc.MethodDescriptor<grpc.PaymentSystem.PaymentRequest,
+      grpc.PaymentSystem.APIResponse> getPaymentMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "payment",
-      requestType = exam.paymentsystem.PaymentRequest.class,
-      responseType = exam.paymentsystem.PaymentResponse.class,
+      requestType = grpc.PaymentSystem.PaymentRequest.class,
+      responseType = grpc.PaymentSystem.APIResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<exam.paymentsystem.PaymentRequest,
-      exam.paymentsystem.PaymentResponse> getPaymentMethod() {
-    io.grpc.MethodDescriptor<exam.paymentsystem.PaymentRequest, exam.paymentsystem.PaymentResponse> getPaymentMethod;
-    if ((getPaymentMethod = PaymentServiceGrpc.getPaymentMethod) == null) {
-      synchronized (PaymentServiceGrpc.class) {
-        if ((getPaymentMethod = PaymentServiceGrpc.getPaymentMethod) == null) {
-          PaymentServiceGrpc.getPaymentMethod = getPaymentMethod = 
-              io.grpc.MethodDescriptor.<exam.paymentsystem.PaymentRequest, exam.paymentsystem.PaymentResponse>newBuilder()
+  public static io.grpc.MethodDescriptor<grpc.PaymentSystem.PaymentRequest,
+      grpc.PaymentSystem.APIResponse> getPaymentMethod() {
+    io.grpc.MethodDescriptor<grpc.PaymentSystem.PaymentRequest, grpc.PaymentSystem.APIResponse> getPaymentMethod;
+    if ((getPaymentMethod = paymentGrpc.getPaymentMethod) == null) {
+      synchronized (paymentGrpc.class) {
+        if ((getPaymentMethod = paymentGrpc.getPaymentMethod) == null) {
+          paymentGrpc.getPaymentMethod = getPaymentMethod = 
+              io.grpc.MethodDescriptor.<grpc.PaymentSystem.PaymentRequest, grpc.PaymentSystem.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "exam.paymentsystem.PaymentService", "payment"))
+                  "grpc.payment", "payment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  exam.paymentsystem.PaymentRequest.getDefaultInstance()))
+                  grpc.PaymentSystem.PaymentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  exam.paymentsystem.PaymentResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new PaymentServiceMethodDescriptorSupplier("payment"))
+                  grpc.PaymentSystem.APIResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new paymentMethodDescriptorSupplier("payment"))
                   .build();
           }
         }
@@ -62,34 +62,34 @@ public final class PaymentServiceGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static PaymentServiceStub newStub(io.grpc.Channel channel) {
-    return new PaymentServiceStub(channel);
+  public static paymentStub newStub(io.grpc.Channel channel) {
+    return new paymentStub(channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static PaymentServiceBlockingStub newBlockingStub(
+  public static paymentBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new PaymentServiceBlockingStub(channel);
+    return new paymentBlockingStub(channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static PaymentServiceFutureStub newFutureStub(
+  public static paymentFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new PaymentServiceFutureStub(channel);
+    return new paymentFutureStub(channel);
   }
 
   /**
    */
-  public static abstract class PaymentServiceImplBase implements io.grpc.BindableService {
+  public static abstract class paymentImplBase implements io.grpc.BindableService {
 
     /**
      */
-    public void payment(exam.paymentsystem.PaymentRequest request,
-        io.grpc.stub.StreamObserver<exam.paymentsystem.PaymentResponse> responseObserver) {
+    public void payment(grpc.PaymentSystem.PaymentRequest request,
+        io.grpc.stub.StreamObserver<grpc.PaymentSystem.APIResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getPaymentMethod(), responseObserver);
     }
 
@@ -99,8 +99,8 @@ public final class PaymentServiceGrpc {
             getPaymentMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                exam.paymentsystem.PaymentRequest,
-                exam.paymentsystem.PaymentResponse>(
+                grpc.PaymentSystem.PaymentRequest,
+                grpc.PaymentSystem.APIResponse>(
                   this, METHODID_PAYMENT)))
           .build();
     }
@@ -108,26 +108,26 @@ public final class PaymentServiceGrpc {
 
   /**
    */
-  public static final class PaymentServiceStub extends io.grpc.stub.AbstractStub<PaymentServiceStub> {
-    private PaymentServiceStub(io.grpc.Channel channel) {
+  public static final class paymentStub extends io.grpc.stub.AbstractStub<paymentStub> {
+    private paymentStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private PaymentServiceStub(io.grpc.Channel channel,
+    private paymentStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PaymentServiceStub build(io.grpc.Channel channel,
+    protected paymentStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new PaymentServiceStub(channel, callOptions);
+      return new paymentStub(channel, callOptions);
     }
 
     /**
      */
-    public void payment(exam.paymentsystem.PaymentRequest request,
-        io.grpc.stub.StreamObserver<exam.paymentsystem.PaymentResponse> responseObserver) {
+    public void payment(grpc.PaymentSystem.PaymentRequest request,
+        io.grpc.stub.StreamObserver<grpc.PaymentSystem.APIResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getPaymentMethod(), getCallOptions()), request, responseObserver);
     }
@@ -135,25 +135,25 @@ public final class PaymentServiceGrpc {
 
   /**
    */
-  public static final class PaymentServiceBlockingStub extends io.grpc.stub.AbstractStub<PaymentServiceBlockingStub> {
-    private PaymentServiceBlockingStub(io.grpc.Channel channel) {
+  public static final class paymentBlockingStub extends io.grpc.stub.AbstractStub<paymentBlockingStub> {
+    private paymentBlockingStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private PaymentServiceBlockingStub(io.grpc.Channel channel,
+    private paymentBlockingStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PaymentServiceBlockingStub build(io.grpc.Channel channel,
+    protected paymentBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new PaymentServiceBlockingStub(channel, callOptions);
+      return new paymentBlockingStub(channel, callOptions);
     }
 
     /**
      */
-    public exam.paymentsystem.PaymentResponse payment(exam.paymentsystem.PaymentRequest request) {
+    public grpc.PaymentSystem.APIResponse payment(grpc.PaymentSystem.PaymentRequest request) {
       return blockingUnaryCall(
           getChannel(), getPaymentMethod(), getCallOptions(), request);
     }
@@ -161,26 +161,26 @@ public final class PaymentServiceGrpc {
 
   /**
    */
-  public static final class PaymentServiceFutureStub extends io.grpc.stub.AbstractStub<PaymentServiceFutureStub> {
-    private PaymentServiceFutureStub(io.grpc.Channel channel) {
+  public static final class paymentFutureStub extends io.grpc.stub.AbstractStub<paymentFutureStub> {
+    private paymentFutureStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private PaymentServiceFutureStub(io.grpc.Channel channel,
+    private paymentFutureStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PaymentServiceFutureStub build(io.grpc.Channel channel,
+    protected paymentFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new PaymentServiceFutureStub(channel, callOptions);
+      return new paymentFutureStub(channel, callOptions);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<exam.paymentsystem.PaymentResponse> payment(
-        exam.paymentsystem.PaymentRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<grpc.PaymentSystem.APIResponse> payment(
+        grpc.PaymentSystem.PaymentRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getPaymentMethod(), getCallOptions()), request);
     }
@@ -193,10 +193,10 @@ public final class PaymentServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final PaymentServiceImplBase serviceImpl;
+    private final paymentImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(PaymentServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(paymentImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -206,8 +206,8 @@ public final class PaymentServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_PAYMENT:
-          serviceImpl.payment((exam.paymentsystem.PaymentRequest) request,
-              (io.grpc.stub.StreamObserver<exam.paymentsystem.PaymentResponse>) responseObserver);
+          serviceImpl.payment((grpc.PaymentSystem.PaymentRequest) request,
+              (io.grpc.stub.StreamObserver<grpc.PaymentSystem.APIResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -225,32 +225,32 @@ public final class PaymentServiceGrpc {
     }
   }
 
-  private static abstract class PaymentServiceBaseDescriptorSupplier
+  private static abstract class paymentBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    PaymentServiceBaseDescriptorSupplier() {}
+    paymentBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return exam.paymentsystem.PaymentSystem.getDescriptor();
+      return grpc.PaymentSystem.getDescriptor();
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("PaymentService");
+      return getFileDescriptor().findServiceByName("payment");
     }
   }
 
-  private static final class PaymentServiceFileDescriptorSupplier
-      extends PaymentServiceBaseDescriptorSupplier {
-    PaymentServiceFileDescriptorSupplier() {}
+  private static final class paymentFileDescriptorSupplier
+      extends paymentBaseDescriptorSupplier {
+    paymentFileDescriptorSupplier() {}
   }
 
-  private static final class PaymentServiceMethodDescriptorSupplier
-      extends PaymentServiceBaseDescriptorSupplier
+  private static final class paymentMethodDescriptorSupplier
+      extends paymentBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    PaymentServiceMethodDescriptorSupplier(String methodName) {
+    paymentMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -265,11 +265,11 @@ public final class PaymentServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (PaymentServiceGrpc.class) {
+      synchronized (paymentGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new PaymentServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new paymentFileDescriptorSupplier())
               .addMethod(getPaymentMethod())
               .build();
         }

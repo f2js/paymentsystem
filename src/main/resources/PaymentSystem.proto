@@ -1,16 +1,16 @@
 syntax = "proto3";
-option java_multiple_files = true;
-package exam.paymentsystem;
+package grpc;
 
 message PaymentRequest {
-  string orderId = 1;
-  string orderPrice = 2;
+  int32 orderId = 1;
+  double orderPrice = 2;
 }
 
-message PaymentResponse {
-  string response = 1;
+message APIResponse{
+  string responsemessage = 1;
+  int32  responseCode  = 2;
 }
 
-service PaymentService {
-  rpc payment(PaymentRequest) returns (PaymentResponse);
+service payment {
+  rpc payment(PaymentRequest) returns (APIResponse);
 }
