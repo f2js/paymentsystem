@@ -8,8 +8,8 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - nodePort: 30172 # - a static port assigned on each the node
+    - nodePort: 30175 # - a static port assigned on each the node
       port: 9090 # - port exposed internally in the cluster
       targetPort: 9090 # - the container port to send requests to
   selector:
-    app.kubernetes.io/name: paymentsystem
+    app.kubernetes.io/name: payment-service
