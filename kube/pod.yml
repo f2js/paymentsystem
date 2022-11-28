@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: paymentsystem
+  labels:
+    app.kubernetes.io/name: paymentsystem
+spec:
+  containers:
+    - name: paymentsystem
+      image: f2js/paymentsystem
+      ports:
+        - containerPort: 9090
+      env:
+        - name: CLUSTER_IP
+          value: ${CLUSTER_IP}
+  hostAliases:
+    - ip: ${CLUSTER_IP}
+      hostnames:
+        - "kafka-broker"
