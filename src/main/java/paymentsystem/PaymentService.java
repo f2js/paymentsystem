@@ -23,12 +23,12 @@ public class PaymentService extends paymentImplBase {
         APIResponse.Builder response = APIResponse.newBuilder();
         if(orderId != null || orderPrice != null){
             if(int_random == 0){
-                response.setResponseCode(100).setResponsemessage("|PAYMENT FAILURE|");
+                response.setResponseCode(200).setResponsemessage("|PAYMENT FAILURE|");
             } else {
-                response.setResponseCode(0).setResponsemessage("|PAYMENT SUCCESS| " + stringResponse );
+                response.setResponseCode(500).setResponsemessage("|PAYMENT SUCCESS| " + stringResponse );
             }
         } else {
-            response.setResponseCode(100).setResponsemessage("|FAILURE| " + stringResponse);
+            response.setResponseCode(400).setResponsemessage("|FAILURE| " + stringResponse);
         }
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
