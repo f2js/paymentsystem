@@ -6,7 +6,7 @@ jobs:
     docker:
       - image: circleci/buildpack-deps:bullseye
     environment:
-      IMAGE_NAME: f2js/paymentsystem
+      IMAGE_NAME: f2js/payment
     working_directory: ~/app
     steps:
       - checkout
