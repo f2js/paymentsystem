@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: payment-service
+  name: payment
   labels:
-    app.kubernetes.io/name: payment-service
+    app.kubernetes.io/name: payment
 spec:
   containers:
     - name: payment-service
-      image: f2js/paymentsystem
+      image: f2js/payment
       ports:
         - containerPort: 9090
       env:
