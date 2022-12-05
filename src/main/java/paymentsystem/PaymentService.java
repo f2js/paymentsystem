@@ -23,9 +23,9 @@ public class PaymentService extends grpc.PaymentServiceGrpc.PaymentServiceImplBa
         APIResponse.Builder response = APIResponse.newBuilder();
         if(orderId != null || orderPrice != null){
             if(int_random == 0){
-                response.setResponseCode(200).setResponsemessage("|PAYMENT FAILURE|");
+                response.setResponseCode(500).setResponsemessage("|PAYMENT FAILURE|");
             } else {
-                response.setResponseCode(500).setResponsemessage("|PAYMENT SUCCESS| " + stringResponse );
+                response.setResponseCode(200).setResponsemessage("|PAYMENT SUCCESS| " + stringResponse );
             }
         } else {
             response.setResponseCode(400).setResponsemessage("|FAILURE| " + stringResponse);
