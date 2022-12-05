@@ -11,6 +11,6 @@ message APIResponse{
   int32  responseCode  = 2;
 }
 
-service payment {
+service PaymentService {
   rpc payment(PaymentRequest) returns (APIResponse);
 }

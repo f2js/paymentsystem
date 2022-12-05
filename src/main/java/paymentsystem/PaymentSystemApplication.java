@@ -12,8 +12,9 @@ public class PaymentSystemApplication {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         System.out.println("starting GRPC Server");
-        Server server = ServerBuilder.forPort(9090).addService(
-                new PaymentService()).build();
+        Server server = ServerBuilder.forPort(9090)
+                .addService(new PaymentService())
+                .build();
         server.start();
 
         System.out.println("server started at " + server.getPort());

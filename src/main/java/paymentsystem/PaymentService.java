@@ -1,15 +1,15 @@
 package paymentsystem;
 
 import grpc.PaymentSystem;
-import grpc.paymentGrpc.paymentImplBase;
 import io.grpc.stub.StreamObserver;
 import grpc.PaymentSystem.APIResponse;
+import grpc.PaymentSystem.PaymentRequest;
 
 import java.util.Random;
 
-public class PaymentService extends paymentImplBase {
+public class PaymentService extends grpc.PaymentServiceGrpc.PaymentServiceImplBase {
     @Override
-    public void payment(PaymentSystem.PaymentRequest request, StreamObserver<PaymentSystem.APIResponse> responseObserver) {
+    public void payment(PaymentRequest request, StreamObserver<PaymentSystem.APIResponse> responseObserver) {
         Integer orderId = request.getOrderId();
         Double orderPrice = (request.getOrderPrice());
 

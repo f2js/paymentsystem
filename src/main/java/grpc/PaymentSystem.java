@@ -1191,9 +1191,9 @@ public final class PaymentSystem {
       "\n\023PaymentSystem.proto\022\004grpc\"5\n\016PaymentRe" +
       "quest\022\017\n\007orderId\030\001 \001(\005\022\022\n\norderPrice\030\002 \001" +
       "(\001\"<\n\013APIResponse\022\027\n\017responsemessage\030\001 \001" +
-      "(\t\022\024\n\014responseCode\030\002 \001(\0052=\n\007payment\0222\n\007p" +
-      "ayment\022\024.grpc.PaymentRequest\032\021.grpc.APIR" +
-      "esponseb\006proto3"
+      "(\t\022\024\n\014responseCode\030\002 \001(\0052D\n\016PaymentServi" +
+      "ce\0222\n\007payment\022\024.grpc.PaymentRequest\032\021.gr" +
+      "pc.APIResponseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
