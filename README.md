@@ -1,4 +1,8 @@
 # PAYMENT SYSTEM
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/f2js/paymentsystem/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/f2js/paymentsystem/tree/main)
+
+[![CircleCI](https://dl.circleci.com/insights-snapshot/gh/f2js/paymentsystem/main/build-deploy-master/badge.svg?window=30d)](https://app.circleci.com/insights/github/f2js/paymentsystem/workflows/build-deploy-master/overview?branch=main&reporting-window=last-30-days&insights-snapshot=true)
+
 ### Group members: 
 
 **Name** Josef Marc Pedersen **Github** [@josefmarcc ](https://github.com/josefmarcc) **Email** cph-jp325@cphbusiness.dk  
