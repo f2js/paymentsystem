@@ -6,7 +6,7 @@ metadata:
   labels:
     app: web
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - nodePort: 0 # - a static port assigned on each the node
       port: 9090 # - port exposed internally in the cluster
